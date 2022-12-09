@@ -1,12 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
+
+  const [user, setUser] = useState({
+    name:'',
+    email: '',
+  })
 
   return (
     <div>
-      <form>
+      <form action= ''>
+        {user.name}
+        <input type="text" value= {user.name} onChange={(e) => setUser({...user, name: e.target.value})} />
+        {user.email}
+        <input type="email" value= {user.email} onChange={(e) => setUser({...user, email: e.target.value})} />
+
       </form>
     </div>
   );
