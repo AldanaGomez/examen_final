@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 
 const Card = ({ name, username, id }) => {
-
-  const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
+  
+  const addFav = ()=>{ 
   }
 
   return (
     <div className="card">
         
         <Link key= {id} to={`/dentist/${id}`}>
+          <img src="./images/doctor.jpg" alt="Doctor" />
           <h3>{name}</h3>
           <h4>{username}</h4>
           <h5>{id}</h5>
